@@ -51,6 +51,8 @@ Differentiating the loss function with respect to the weights we arrive at the f
 
 $$\nabla L_i(\theta_i) = E[(r + \gamma max_{a'}Q(s',a';\theta_{i-1}) - Q(s,a;\theta_i))\nabla_{\theta_i}Q(s,a;\theta_i)]$$
 
+
+
 #### Environment setup
 We consider tasks in which an agent interacts with an environment E, in this case the Atari emulator,
 in a sequence of actions, observations and rewards. At each time-step the agent selects an action
@@ -72,4 +74,7 @@ Note that this algorithm is model-free: it solves the reinforcement learning tas
 learns about the greedy strategy a = max a Q(s, a; θ), while following a behavior distribution that
 ensures the adequate exploration of the state space. In practice, the behavior distribution is often selected by an $$\epsilon$$-greedy strategy that follows the greedy strategy with probability 1 − $$\epsilon$$ and selects a
 random action with probability $$\epsilon$$.
+
+### Pesudo code
+![testimg](https://github.com/yingfuzeng/Rl-notes/blob/master/images/DQN-code.png?raw=true)
 
